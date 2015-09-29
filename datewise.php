@@ -1,31 +1,23 @@
-<?php include("./session.php"); ?>
-<?php confirmlogin(); ?>
-
-
-<?php include("./includes/header.php"); ?>
+<?php 
+   include("./session.php");
+   confirmlogin();
+   include("./includes/header.php"); 
+   include("./includes/connection.php");
+?>
 <center>
 
 <span>
 		<div id ="sidebar">
-
 			<?php
-				
-			
-
 				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
 				{
-
-					include("./user1/u1sidebar.php");
+					include("./includes/u1sidebar.php");
 				}
 				else
 				{
-					include("./user2/u2sidebar.php");
+					include("./includes/u2sidebar.php");
 				}
-
 			?>
-
-
-
 		</div>
 
 		<div id ="mainbar">
@@ -41,12 +33,7 @@
 			<div id = "dbfetch">
 				<div id="dbcontent">
 						<?php
-								$con = mysql_connect("localhost", "root", "");
-
-								mysql_select_db( "aaruush_report",$con);	
-
-
-								if($_SESSION['user-level']==2)
+							if($_SESSION['user-level']==2)
 								{
 									echo "<div>Reports you have already submitted</div>";
 
@@ -148,23 +135,11 @@
 
 									}
 								}		
-
-
-
 						?>
 				</div>
-
-
-
-			</div>
-
-
-				
+			</div>			
 		</div>
 	</span>
 
 </center>
-
-
-
 <?php include("./includes/footer.php"); ?>

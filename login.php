@@ -1,8 +1,8 @@
-<?php include("./session.php"); ?>
-<?php include("./includes/connection.php"); ?>
-<?php
+<?php 
+	include("./session.php");
+    include("./includes/connection.php");
 
-  $query="SELECT regno,name,ulevel FROM `ptable` WHERE regno=".$user ." AND password='".$hashedpass ."'";
+  $query="SELECT regno,name,ulevel FROM `ptable` WHERE regno=".$user." AND password='".$hashedpass."'";
 
   $result_set=mysql_query($query);
 
@@ -19,7 +19,6 @@
 		$_SESSION['user-level']=$found_user['ulevel'];
 		header("Location: ./mainpage.php"); /* Redirect browser */
 		exit();
-
 	}
 	else
 	{

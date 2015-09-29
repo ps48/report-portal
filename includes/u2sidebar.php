@@ -8,7 +8,6 @@
 		<a href="./datewise.php"> Sort using date </a>
 	</li>
 
-
 	<li>
 		<a href="./dreport.php"> Create a new report</a>
 	</li>

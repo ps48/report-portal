@@ -2,6 +2,7 @@
 
 	<center>
 	<div id="center">
+		
 		<?php 
 			if(isset($_GET['user']))
 			{
@@ -28,8 +29,6 @@
 			</div>
 
 		</form>	
-
-
 
 	</div>
 	</center>	

@@ -77,11 +77,11 @@
 				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
 				{
 
-					include("./user1/u1sidebar.php");
+					include("./includes/u1sidebar.php");
 				}
 				else
 				{
-					include("./user2/u2sidebar.php");
+					include("./includes/u2sidebar.php");
 				}
 
 			?>

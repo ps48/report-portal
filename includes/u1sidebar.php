@@ -1,6 +1,5 @@
 <ul >
-
-
+	
 	<li>
 		<a href="mainpage.php"> Main Page </a>
 	</li>
@@ -14,7 +13,7 @@
 	</li>
 
 	<li>
-		<a href="nuserform.php"> Create a new user</a>
+		<a href="form_nu.php"> Create a new user</a>
 	</li>
 
 </ul>	

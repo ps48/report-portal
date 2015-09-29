@@ -1,23 +1,25 @@
-<?php include("./session.php"); ?>
-<?php confirmlogin(); ?>
-<?php include("./includes/header.php"); ?>
+<?php
+	  include("./session.php"); 
+      confirmlogin();
+      include("./includes/header.php"); 
+?>
 	
 	<center>
 	<span>
-		<div id ="sidebar">
 
+		<div id ="sidebar">
 			<?php
 				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
 				{
-
-					include("./user1/u1sidebar.php");
+					include("./includes/u1sidebar.php");
 				}
 				else
 				{
-					include("./user2/u2sidebar.php");
+					include("./includes/u2sidebar.php");
 				}
 			?>
 		</div>
+
 		<div id ="mainbar">
 			<section >
 			<div id="divhead">
@@ -36,9 +38,9 @@
 				 	<div id= "inst">
 					 	<dl>
 					 		<dt> General instructions using the portal </dt>
-					 		<dd> The portal will only used by the core team members of aaruush'15. </dd>
+					 		<dd> The portal will only used by the core team members of Organisation. </dd>
 					 		<dd> Any misuse of the portal will be taken seriously. </dd>
-					 		<dd> If there is any problem with the portal send a mail to pshenoy36@gmail.com . </dd>
+					 		<dd> If there is any problem with the portal send a mail to contact@pshenoy.me . </dd>
 					 	</dl>	
 					</div>	
 				 </div>

@@ -1,13 +1,18 @@
 <?php
+  include("./session.php"); 
+  confirmlogin();
+
+if(!(($_SESSION['user-level']==1)||($_SESSION['user-level']==0)||($_GET['user']==$_SESSION['user-id']))) //Illegal Session
+		{
+			header("Location: ./index.php");
+			exit();
+		}
+else
+{
+	include("./includes/connection.php");
 
 	$user=$_GET['user'];
 	$ts=$_GET['time'];
-
-
-	$con = mysql_connect("localhost", "root", "");
-
-	mysql_select_db( "aaruush_report",$con);
-
 
 	$query="SELECT `report` FROM `rtable` WHERE regno=" . $user. " AND timestamp='".$ts. "'";
 
@@ -27,8 +32,6 @@
 		echo "</html>";
 
 	}
-
-
-
+}
 
 ?>

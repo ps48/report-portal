@@ -1,7 +1,5 @@
-<?php include("./session.php"); ?>
-
 <?php 
-	
+	include("./session.php"); 
 	$_SESSION=array();
 
 	if(isset($_COOKIE[session_name()]))
@@ -11,10 +9,5 @@
 	
 	session_destroy();
 
-	
-
-
-
+    confirmlogin(); 
 ?>
-
-<?php confirmlogin(); ?>
