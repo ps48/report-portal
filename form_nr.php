@@ -1,35 +1,23 @@
-<?php include("./session.php"); ?>
-<?php confirmlogin(); ?>
-
-
-<?php include("./includes/header.php"); ?>
+<?php 
+	include("./session.php"); 
+	confirmlogin(); 
+ 	include("./includes/header.php"); ?>
 
 <script type="text/javascript" src="./js/nicEdit.js"></script>
 
 				<script type="text/javascript">
 					bkLib.onDomLoaded(function() {
-
-
 						 new nicEditor({maxHeight : 400 }).panelInstance('area5');
-
-
-
-
 					});
 
 					function oncl()
 					{
-
-
 						var nicE = new nicEditors.findEditor('area5');
 						var question = nicE.getContent();
-
-
 						// Create our XMLHttpRequest object
 						var hr = new XMLHttpRequest();
 						// Create some variables we need to send to our PHP file
-						var url = "dreportget.php";
-
+						var url = "post_nr.php";
 						var vars = "data="+question;
 						hr.open("POST", url, true);
 						hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -45,7 +33,7 @@
 
 										if(return_data.match(/this is it/g))
 											{
-													window.location.href="mainpage.php";
+													window.location.href="dashboard.php";
 											}
 										else
 											{
@@ -57,22 +45,13 @@
 
 						// Send the data to PHP now... and wait for response to update the status div
 						hr.send(vars); // Actually execute the request
-
-
-
 					}
-
-
-
-
 				</script>
 <center>
 	<span>
 		<div id ="sidebar">
 
 			<?php
-
-
 
 				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
 				{
@@ -91,9 +70,7 @@
 		</div>
 
 		<div id ="mainbar">
-
-
-
+		
 			<section>
 				<span >
 				Welcome <?php echo$_SESSION['user-name']." ,"; ?>
@@ -103,22 +80,15 @@
 				</span>
 			</section>
 
-
-
 			<div id = "dbfetch">
 
 				<div id="output"></div>
-
-
-
 				<div id="sample">
 
 					<textarea style="height: 350px; width:80%;"  id="area5">HTML <b>content</b> <i>default</i> in textarea</textarea>
 
 					<button  onclick="oncl()">Submit Report</button>
 				</div>
-
-
 
 			</div>
 

@@ -10,14 +10,13 @@
 			}
 		?>
 
-		<form id="form1"  Method="post" Action="login.php">
+		<form id="formlogin"  Method="post" Action="post_login.php">
 			<div>
 				<span class="label"> Username 
 					<input name="user" type="text"></input>
 				</span>
 			</div>
 			
-
 			<div>
 				<span class="label"> Password 
 					<input name="pass" type="password"></input>

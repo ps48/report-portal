@@ -17,7 +17,7 @@
 		$_SESSION['user-id']=$found_user['regno'];
 		$_SESSION['user-name']=$found_user['name'];
 		$_SESSION['user-level']=$found_user['ulevel'];
-		header("Location: ./mainpage.php"); /* Redirect browser */
+		header("Location: ./dashboard.php"); /* Redirect browser */
 		exit();
 	}
 	else
