@@ -3,10 +3,14 @@
 	confirmlogin(); 
  	include("./includes/header.php"); ?>
 
-<script type="text/javascript" src="./js/nicEdit.js"></script>
+ <script type="text/javascript" src="./js/tinymce.min.js"></script>
 
 				<script type="text/javascript">
-					bkLib.onDomLoaded(function() {
+					tinymce.init({
+			            selector: "#mytextarea"
+			        });
+
+				/*	bkLib.onDomLoaded(function() {
 						 new nicEditor({maxHeight : 400 }).panelInstance('area5');
 					});
 
@@ -45,7 +49,7 @@
 
 						// Send the data to PHP now... and wait for response to update the status div
 						hr.send(vars); // Actually execute the request
-					}
+					}*/
 				</script>
 <center>
 	<span>
@@ -83,12 +87,10 @@
 			<div id = "dbfetch">
 
 				<div id="output"></div>
-				<div id="sample">
-
-					<textarea style="height: 350px; width:80%;"  id="area5">HTML <b>content</b> <i>default</i> in textarea</textarea>
-
-					<button  onclick="oncl()">Submit Report</button>
-				</div>
+				<form Method="post" Action="post_nr.php">
+			        <textarea id="mytextarea" name="data"></textarea>
+			        <button type="submit">send</button>
+			    </form>
 
 			</div>
 

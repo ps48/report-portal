@@ -17,9 +17,9 @@
 			}
 			else
 			{
-				echo "this is it";
-			//	header("Location: ./dashboard.php"); /* Redirect browser */
-			//	exit();		
+			//	echo "this is it";
+				header("Location: ./dashboard.php"); /* Redirect browser */
+				exit();		
 			}
 	}
 	else

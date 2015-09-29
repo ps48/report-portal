@@ -1,4 +1,4 @@
-<ul >
+<ul>
 	
 	<li>
 		<a href="./dashboard.php"> Main Page </a>
