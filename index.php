@@ -1,7 +1,5 @@
 	<?php include("./includes/header.php"); ?>
 
-	
-
 	<div class="container offset-s4 col s4 white card">
 		<div class="row">
 		    <form class="col s12 " id="formlogin"  Method="post" Action="post_login.php">

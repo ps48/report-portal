@@ -9,6 +9,15 @@ html,body
 }
 .ful
 {
-	height: 100%;
+	height: 100vh;
+}
+.row
+{
 	margin-bottom: 0px;
+}
+
+////////////////////////// Materialize Override ////////////////////////////////////////////////
+.collection .collection-item.active {
+    background-color: #01579B !important;
+    color: #EAFAF9 !important;
 }

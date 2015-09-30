@@ -11,9 +11,9 @@
 </head>
 
 <body>
-	<div class="light-blue darken-1 ful row">
+	<div class=" light-blue darken-1 darken-2 ful row">
 
-	<div class="light-blue darken-4 flow-text row navi white-text valign-wrapper">
+	<div class="light-blue darken-4 flow-text row navi white-text valign-wrapper z-depth-1">
 		<div class="offset-s1 col s3 valign">Report Portal</div>
 	</div>
 

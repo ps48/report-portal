@@ -1,19 +1,16 @@
-<ul>
+<div class="collection">
 	
-	<li>
-		<a href="./dashboard.php"> Main Page </a>
-	</li>
+	<a class="collection-item light-blue-text" id="mainp" href="./dashboard.php"> DashBoard </a>
+	
 
-	<li>
-		<a href="./show_dates.php"> Sort using date </a>
-	</li>
+	<a class="collection-item light-blue-text" id="dwise" href="./show_dates.php"> Sort using date </a>
+	
 
-	<li>
-		<a href="./show_names.php"> Sort using Member name</a>
-	</li>
+	<a class="collection-item light-blue-text" id="nwise" href="./show_names.php"> Sort using Member name</a>
+	
 
-	<li>
-		<a href="./form_nu.php"> Create a new user</a>
-	</li>
+	<a class="collection-item light-blue-text" id="nuser" href="./form_nu.php"> Create a new user</a>
+	
 
-</ul>	
+</div>	
+
