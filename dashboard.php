@@ -4,10 +4,10 @@
       include("./includes/header.php"); 
 ?>
 	
-	<center>
+	<!--<center>
 	<span>
 
-		<div id ="sidebar">
+		<div class="">
 			<?php
 				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
 				{
@@ -44,12 +44,22 @@
 					 	</dl>	
 					</div>	
 				 </div>
-
 			</div>
-		
 		</div>
 	</span>
-	</center>
+	</center>-->
+ <div class="row">
+
+      <div class="col s3">
+        <!-- Grey navigation panel -->
+      </div>
+
+      <div class="col s9">
+        <!-- Teal page content  -->
+      </div>
+
+    </div>
+
 
 <?php include("./includes/footer.php"); ?>
 

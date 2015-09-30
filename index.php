@@ -1,36 +1,37 @@
-<?php include("./includes/header.php"); ?>
+	<?php include("./includes/header.php"); ?>
 
-	<center>
-	<div id="center">
-		
-		<?php 
-			if(isset($_GET['user']))
-			{
-				echo"<div class=\"alert\"> Incorrect credentials </div>";
-			}
-		?>
+	
 
-		<form id="formlogin"  Method="post" Action="post_login.php">
-			<div>
-				<span class="label"> Username 
-					<input name="user" type="text"></input>
-				</span>
-			</div>
-			
-			<div>
-				<span class="label"> Password 
-					<input name="pass" type="password"></input>
-				</span>
-			</div>
+	<div class="container offset-s4 col s4 white card">
+		<div class="row">
+		    <form class="col s12 " id="formlogin"  Method="post" Action="post_login.php">
+		      <div class="container">
+		      	<p></p>
+		      	<div class="flow-text">
+		      	<div class="center-align">	Sign-In</div>
+		      	</div>
+		         
+		         <div class="input-field">
+		          <i class="material-icons prefix">account_circle</i>
+		          <input id="user" name="user" type="text" class="validate">
+		          <label for="user">Username</label>
+		        </div>
 
-			<div>
-				<button id="login" class="formbtn">login</button>
-			</div>
+		        <div class="input-field">
+		          <i class="material-icons prefix">lock</i>	
+		          <input id="pass" name="pass" type="password" class="validate">
+		          <label for="pass">Password</label>
+		        </div>
 
-		</form>	
-
+		          <button class="offset-s3 col s5 waves-effect waves-light btn">
+		          	Login
+		          	<i class="material-icons right">send</i>
+		          </button>
+		       
+		      </div>
+		    </form>
+		</div>      
 	</div>
-	</center>	
 
 
 <?php include("./includes/footer.php"); ?>
