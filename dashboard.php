@@ -4,50 +4,7 @@
       include("./includes/header.php"); 
 ?>
 	
-	<!--<center>
-	<span>
-
-		<div class="">
-			<?php
-				if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
-				{
-					include("./includes/u1sidebar.php");
-				}
-				else
-				{
-					include("./includes/u2sidebar.php");
-				}
-			?>
-		</div>
-
-		<div id ="mainbar">
-			<section >
-			<div id="divhead">
-				<span >
-				Welcome <?php echo$_SESSION['user-name']." ,"; ?> 
-				</span>
-				<span>
-					<a href="./logout.php"> Logout </a>
-				</span>	
-			</div>
-			</section>
-
-			<div id = "dbfetch">
-			   
-				 <div id="mainpager">
-				 	<div id= "inst">
-					 	<dl>
-					 		<dt> General instructions using the portal </dt>
-					 		<dd> The portal will only used by the core team members of Organisation. </dd>
-					 		<dd> Any misuse of the portal will be taken seriously. </dd>
-					 		<dd> If there is any problem with the portal send a mail to contact@pshenoy.me . </dd>
-					 	</dl>	
-					</div>	
-				 </div>
-			</div>
-		</div>
-	</span>
-	</center>-->
+<div class="spacer"></div>
  <div class="row">
 
       <div class="col s3">
@@ -60,20 +17,47 @@
 				{
 					include("./includes/u2sidebar.php");
 				}
-		?>
-        
+		?>   
       </div>
 
-      <div class="col s9 white">
-        <!-- Teal page content  -->
+      <div class="col s9">
+       <div class="card-panel hoverable row">
+       		
+       		<h4 class="center-align blue-text text-darken-2"> My DashBoard </h4>	
+       			
+       			<div class="row">
+		       		<div class="col s4 left-align f18 blue-text">
+						 Welcome <?php echo$_SESSION['user-name'].","; ?> 
+		       		</div>
+
+		       		<div class="offset-s4 col s4">
+		       		    <a class="waves-effect waves-light btn blue right z-depth-1" href="./logout.php">Logout</a>
+		       		</div>
+		       	</div>
+
+		       	<div class="blue-text text-darken-2">
+		       		<div class="container spacer f18">
+		       			<div class="f18 blue-text text-darken-2">Current Stats</div>
+		       			
+		       			<div class="container spacer blue-text darken-4-text">
+		       				Total Reports : <?php ?>
+						</div>
+
+						<div class="container spacer blue-text darken-4-text">
+		       				Last Date : <?php ?>
+						</div>
+
+		       		</div>
+	       		</div>
+
+	       <div class="spacer"></div>
+	       	
+
+       </div>
       </div>
 
     </div>
 
 
 <?php include("./includes/footer.php"); ?>
-
-<script type="text/javascript">
-	$("#mainp").addClass("active");
-</script>
 

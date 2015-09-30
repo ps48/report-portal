@@ -1,15 +1,12 @@
-<ul>
+<div class="collection">
 
-	<li>
-		<a href="./dashboard.php"> Main Page </a>
-	</li>
+	<a class="collection-item light-blue-text" id="mainp" href="./dashboard.php"> DashBoard </a>
+	
 
-	<li>
-		<a href="./show_dates.php"> Sort using date </a>
-	</li>
+	<a class="collection-item light-blue-text" id="dwise" href="./show_dates.php"> Sort using date </a>
+	
 
-	<li>
-		<a href="./form_nr.php"> Create a new report</a>
-	</li>
+	<a class="collection-item light-blue-text" id="nrep" href="./form_nr.php"> Create a new report</a>
+	
 
-</ul>	
+</div>	
