@@ -9,10 +9,10 @@
 			exit();
 		}
 ?>	
-
+<div class="spacer"></div>
 <div class="container offset-s4 col s4 white card">
 		<div class="row">
-		    <form class="col s12 " id="formlogin"  Method="post" Action="post_login.php">
+		    <form class="col s12 " id="formlogin"  Method="post" Action="post_nu.php">
 		      <div class="container">
 		      	<p></p>
 		      	<div class="flow-text">

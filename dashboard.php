@@ -61,7 +61,8 @@
 
 									}
 									else
-										{
+										{	
+											file_put_contents ( "log_file.txt" , "hello \n", FILE_APPEND  );
 											echo mysql_error();
 										}
 
@@ -91,8 +92,13 @@
 
 									}
 									else
-										{
-											echo mysql_error();
+										{	
+											$ts= date("Y-m-d H:i:s");
+											$error= $ts." Page-".basename(__FILE__, '')." ".mysql_error()." User ".$_SESSION['user-id']."\n";
+											file_put_contents ( "_ERROR_LOG.txt",$error,FILE_APPEND);
+											header("Location: ./index.php?error=page error"); /* Redirect browser */
+											exit();
+											
 										}
 
 

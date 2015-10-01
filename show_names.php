@@ -57,7 +57,11 @@
 									}
 									else
 										{
-											echo mysql_error();
+											$ts= date("Y-m-d H:i:s");
+											$error= $ts." Page-".basename(__FILE__, '')." ".mysql_error()." User ".$_SESSION['user-id']."\n";
+											file_put_contents ( "_ERROR_LOG.txt",$error,FILE_APPEND);
+											header("Location: ./dashboard.php?error=page error"); /* Redirect browser */
+											exit();
 										}
 								}
 								else
@@ -81,8 +85,12 @@
 										}
 										else
 										{
-											echo mysql_error();
-										}
+											$ts= date("Y-m-d H:i:s");
+											$error= $ts." Page-".basename(__FILE__, '')." ".mysql_error()." User ".$_SESSION['user-id']."\n";
+											file_put_contents ( "_ERROR_LOG.txt",$error,FILE_APPEND);
+											header("Location: ./dashboard.php?error=page error"); /* Redirect browser */
+											exit();
+									}
 
 								}	
 						?>
