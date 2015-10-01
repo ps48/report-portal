@@ -3,7 +3,7 @@ Report Portal
 Send Daily Text documents
 =========================
 
-![report-screenshot](screenshots/rp2.jpg "Make report online")
+![report-screenshot](https://github.com/ps48/report-portal/blob/master/screenshots/rp2.JPG "Make report online")
 
 ###UI - Materialise CSS
 
