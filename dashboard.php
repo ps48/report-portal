@@ -3,7 +3,13 @@
       confirmlogin();
       include("./includes/header.php");
       include("./includes/connection.php"); 
+      if(isset($_GET['error']))
+		$er=$_GET['error'];
 ?>
+<script type="text/javascript">
+		Materialize.toast('<?php echo $er; ?>', 3000);
+	</script>
+
 	
 <div class="spacer"></div>
  <div class="row">

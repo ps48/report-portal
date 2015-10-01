@@ -1,4 +1,13 @@
-	<?php include("./includes/header.php"); ?>
+<?php include("./includes/header.php"); 
+
+	if(isset($_GET['error']))
+		$er=$_GET['error'];
+
+?>
+	<script type="text/javascript">
+		Materialize.toast('<?php echo $er; ?>', 3000);
+	</script>
+
 	<div class="spacer"></div>
 	<div class="container offset-s4 col s4 white card">
 		<div class="row">

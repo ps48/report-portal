@@ -4,11 +4,12 @@
 
   $name=$_POST['name'];
   $ulevel=2;
-  $query="INSERT INTO `ptable`(`regno`, `name`, `password`, `ulevel`) VALUES (".$user.",'".$name."','".$hashedpass."',".$ulevel.")";
+  $query="INSERT INTO `ptable` (`regno`, `name`, `password`, `ulevel`) VALUES 
+  							(".$user.",'".$name."','".$hashedpass."',".$ulevel.")";
 
 	if( mysql_query($query,$con))
 	{
-		header("Location: ./dashboard.php?nuser=".$name); /* Redirect browser */
+		header("Location: ./dashboard.php?error= New User ".$name." created"); /* Redirect browser */
 		exit();
 	}
 	else

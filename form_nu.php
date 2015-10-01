@@ -27,7 +27,7 @@
 
 		        <div class="input-field">
 		          <i class="material-icons prefix">account_box</i>
-		          <input id="user" name="user" type="text" class="validate">
+		          <input id="user" name="name" type="text" class="validate">
 		          <label for="user">Full Name</label>
 		        </div>
 
