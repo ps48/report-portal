@@ -14,7 +14,7 @@ else
 	$user=$_GET['user'];
 	$ts=$_GET['time'];
 
-	$query="SELECT `report` FROM `rtable` WHERE regno=" . $user. " AND timestamp='".$ts. "'";
+	$query="SELECT `name`,`report` FROM `rtable` WHERE regno=" . $user. " AND timestamp='".$ts. "'";
 
 	$result=mysql_query($query,$con);
 
@@ -26,10 +26,32 @@ else
 	{
 		$fetch=mysql_fetch_array($result);
 
+		$name = $fetch['name'];
 		$text = $fetch['report'];
-		echo "<html>";
-		echo 	$text;
-		echo "</html>";
+		
+		include("./includes/header.php");
+?>
+
+<div class="container">
+	<div class="card-panel row">
+		<div class="left blue-text col s3">
+		     User: <?php echo " ".$name; ?>	
+		</div>
+
+		<div class="right blue-text col s3">
+		  Time: <?php echo " ".$ts; ?>
+		</div>
+		<div class="spacer"></div>
+		<div class="col s12">
+			<?php echo 	$text; ?>
+		</div>
+		
+		<div class="spacer"></div>
+	</div>
+</div>
+
+<?php		
+	include("./includes/footer.php");
 
 	}
 }
