@@ -55,6 +55,10 @@
 										}
 
 									}
+									else
+										{
+											echo mysql_error();
+										}
 								}
 								else
 								{

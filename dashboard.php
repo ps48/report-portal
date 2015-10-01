@@ -1,7 +1,8 @@
 <?php
 	  include("./session.php"); 
       confirmlogin();
-      include("./includes/header.php"); 
+      include("./includes/header.php");
+      include("./includes/connection.php"); 
 ?>
 	
 <div class="spacer"></div>
@@ -40,11 +41,62 @@
 		       			<div class="f18 blue-text text-darken-2">Current Stats</div>
 		       			
 		       			<div class="container spacer blue-text darken-4-text">
-		       				Total Reports : <?php ?>
+		       				Total Reports Submitted: 
+		       				<?php 
+
+		       					if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
+									$query="SELECT count(report) FROM rtable where 1";				
+								else
+									$query="SELECT count(report) FROM rtable where regno=".$_SESSION['user-id'];				
+
+								$result=mysql_query($query,$con);
+
+									if($result)
+									{
+										while($row=mysql_fetch_array($result))
+										{
+											$no=$row['count(report)'];
+											echo $no;	
+										}
+
+									}
+									else
+										{
+											echo mysql_error();
+										}
+
+		       				?>
 						</div>
 
 						<div class="container spacer blue-text darken-4-text">
-		       				Last Date : <?php ?>
+		       				Last Report Submited On:
+		       				 <?php 
+
+		       				 
+		       				 if($_SESSION['user-level']==1||$_SESSION['user-level']==0)
+									$query="select timestamp from rtable order by timestamp desc";				
+								else
+									$query="select timestamp from rtable where regno= '".$_SESSION['user-id']."' ORDER BY timestamp desc";				
+
+								$result=mysql_query($query,$con);
+
+									if($result)
+									{
+										while($row=mysql_fetch_array($result))
+										{
+											$time=$row['timestamp'];
+											echo $time;	
+											break;
+										}
+
+									}
+									else
+										{
+											echo mysql_error();
+										}
+
+
+		       				?>
 						</div>
 
 		       		</div>
@@ -57,7 +109,6 @@
       </div>
 
     </div>
-
 
 <?php include("./includes/footer.php"); ?>
 
